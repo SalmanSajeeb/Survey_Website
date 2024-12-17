@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Survey Form</h1>
+    <form id="surveyForm" action="/submit" method="POST">
+        <label for="name">Name (Required):</label>
+        <input type="text" id="name" name="name" required minlength="2"><br><br>
+
+        <label for="email">Email (Required):</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="age">Age (18-99):</label>
+        <input type="number" id="age" name="age" min="18" max="99"><br><br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+
+        <label>Interests:</label>
+        <input type="checkbox" id="music" name="interests" value="Music">
+        <label for="music">Music</label>
+        <input type="checkbox" id="sports" name="interests" value="Sports">
+        <label for="sports">Sports</label>
+        <input type="checkbox" id="reading" name="interests" value="Reading">
+        <label for="reading">Reading</label>
+        <input type="checkbox" id="traveling" name="interests" value="Traveling">
+        <label for="traveling">Traveling</label><br><br>
+
+        <label for="feedback">Feedback (Required, min 50 characters):</label>
+        <textarea id="feedback" name="feedback" required minlength="50"></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <footer>
+        <p>Created by Salman Sha</p>
+        <p>&copy; 2024 All Rights Reserved</p>
+    </footer>
+
+    <script>
+        document.querySelector('button').addEventListener('click', function () {
+            alert('Thank you for submitting the survey!');
+        });
+    </script>
+</body>
+</html>
